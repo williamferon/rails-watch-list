@@ -1,0 +1,19 @@
+<h1><%= @list.name %></h1>
+<h2>Bookmarks</h2>
+<div class='bookmarks'>
+  <% @list.bookmarks.each do |bookmark|  %>
+    <div class='bookmark'>
+      <h3><%= bookmark.movie.title %></h3>
+      <p><%= bookmark.comment %></p>
+    </div>
+  <% end %>
+</div>
+
+<h3>Add a BookMarks</h3>
+<%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.input :comment %>
+    <%= f.association :movie %>
+    <%= f.submit %>
+<% end %>
+
+<%= link_to 'see all lists', lists_path %>

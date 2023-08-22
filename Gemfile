@@ -35,7 +35,7 @@ gem "font-awesome-sass", "~> 6.1"
 
 gem "simple_form"
 
-#gem "sassc-rails" # Uncomment this line
+gem "sassc-rails" # Uncomment this line
 # Use Redis adapter to run Action Cable in production
 # gem "redis", "~> 4.0"
 
